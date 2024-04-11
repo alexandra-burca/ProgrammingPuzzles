@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:programming_puzzles/screens/login.dart';
 import 'package:programming_puzzles/screens/register.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -9,11 +10,11 @@ class IntroScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 130),
+            SizedBox(height: 110),
             Image.asset(
               'assets/images/intro1.png',
-              height: 250,
-              width: 250,
+              height: 270,
+              width: 270,
             ),
             SizedBox(height: 25),
             Text(
@@ -126,8 +127,11 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 110),
-    
-            ElevatedButton(
+
+            Row (
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget> [
+              ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -135,11 +139,11 @@ class WelcomeScreen extends StatelessWidget {
                 );
           
               },
-              child: Text('Login'),
+              child: Text('Cont nou'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.pink[200],
                 foregroundColor: Colors.black, 
-                fixedSize: Size(260, 58),
+                fixedSize: Size(170, 58),
                 textStyle: TextStyle(
                   fontSize: 22,
                   fontFamily: 'Poppins',
@@ -147,6 +151,31 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 ),
             ),
+              SizedBox(width: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+          
+              },
+              child: Text('Login'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal[200],
+                foregroundColor: Colors.black, 
+                fixedSize: Size(170, 58),
+                textStyle: TextStyle(
+                  fontSize: 22,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+            ),
+            ]
+
+            )
+            
           ],
         ),
       ),

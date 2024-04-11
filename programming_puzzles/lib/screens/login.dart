@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RegisterScreen extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
 
   var formKey = GlobalKey<FormState>();
-  var nameController = TextEditingController();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   var isObscure = true.obs;
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,26 +18,25 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-              const SizedBox(height: 50),
-              Image.asset(
-                'assets/images/register.png',
-                height: 280,
-                width: 280,
+            const SizedBox(height: 90),
+            Image.asset(
+              'assets/images/login.png', 
+              width: 270,
+              height: 270,
+            ),
+            SizedBox(height: 30),
+            
+            Text(
+              'Login',
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.bold,
               ),
-              SizedBox(height: 20),
-              // Register text
-              Text(
-                'Register',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 30),
-
-              Padding(
+            ),
+            SizedBox(height: 30),
+            // Textboxes for email and password
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
@@ -45,50 +44,7 @@ class RegisterScreen extends StatelessWidget {
                     key: formKey,
                     child: Column (
                       children: [
-
-                        TextFormField(
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontSize: 18,
-                          ),
-                          controller: nameController,
-                          validator: (val) => val == "" ? "Trebuie sa introduci numele" : null,
-                          decoration: InputDecoration(
-                            prefixIcon: const Icon (
-                              Icons.person_outline,
-                              color: Colors.pink,
-                            ),
-                            hintText: "Nume",
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: const BorderSide(
-                                color: Colors.black,
-                              ),
-                          ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: const BorderSide(
-                                color: Colors.black,
-                              ),
-                          ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: const BorderSide(
-                                color: Colors.black,
-                              ),
-                          ),
-                            disabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: const BorderSide(
-                                color: Colors.black,
-                              ),
-                          ),
-                            contentPadding: const EdgeInsets.all(18),
-                          ),
-                        ),
-                        
-                        SizedBox(height: 12),
-
+                        //email
                         TextFormField(
                           style: TextStyle(
                             fontFamily: 'Poppins',
@@ -99,7 +55,7 @@ class RegisterScreen extends StatelessWidget {
                           decoration: InputDecoration(
                             prefixIcon: const Icon (
                               Icons.email,
-                              color: Colors.pink,
+                              color: Colors.teal,
                             ),
                             hintText: "Email",
                             border: OutlineInputBorder(
@@ -130,7 +86,7 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         ),
 
-                        SizedBox(height: 12),
+                        SizedBox(height: 15),
 
                         Obx(
                           () => TextFormField(
@@ -144,7 +100,7 @@ class RegisterScreen extends StatelessWidget {
                           decoration: InputDecoration(
                             prefixIcon: const Icon (
                               Icons.password,
-                              color: Colors.pink,
+                              color: Colors.teal,
                               
                             ),
                             suffixIcon: Obx(
@@ -156,7 +112,7 @@ class RegisterScreen extends StatelessWidget {
                                 },
                                 child: Icon(
                                   isObscure.value ? Icons.visibility_off : Icons.visibility,
-                                  color: Colors.pink[200],
+                                  color: Colors.teal[200],
                                 )
                               ),
                               ),
@@ -197,29 +153,32 @@ class RegisterScreen extends StatelessWidget {
                 ],
               ),
             ),
-              
-              
-              SizedBox(height: 80),
-              ElevatedButton(
-                onPressed: () {
-                  //register
-                },
-                child: Text('Creare cont'),
+            SizedBox(height: 110),
+            // Button for login process
+            ElevatedButton(
+              onPressed: () {
+                // Perform login process
+                // You can implement the login logic here
+              },
+            
+              child: Text('Intră în cont'),
                 style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pink[200],
+                backgroundColor: Colors.teal[200],
                 foregroundColor: Colors.black, 
                 fixedSize: Size(260, 58),
                 textStyle: TextStyle(
                   fontSize: 22,
                   fontFamily: 'Poppins',
+                
                 ),
                 ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
+          )
+        
       ),
     );
   }
+  
 }
-
