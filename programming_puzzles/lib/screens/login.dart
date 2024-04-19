@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:programming_puzzles/navigation/map.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -156,11 +157,15 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 110),
             // Button for login process
             ElevatedButton(
-              onPressed: () {
-                // Perform login process
-                // You can implement the login logic here
-              },
             
+                onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MapScreen()),
+                );
+          
+              },
+                     
               child: Text('Intră în cont'),
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal[200],

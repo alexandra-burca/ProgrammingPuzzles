@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class RegisterScreen extends StatelessWidget {
 
   var formKey = GlobalKey<FormState>();
@@ -8,6 +9,8 @@ class RegisterScreen extends StatelessWidget {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   var isObscure = true.obs;
+
+  RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class RegisterScreen extends StatelessWidget {
                 height: 280,
                 width: 280,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Register text
               Text(
                 'Register',
@@ -35,7 +38,7 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
 
               Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -87,7 +90,7 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         ),
                         
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
 
                         TextFormField(
                           style: TextStyle(
@@ -130,7 +133,7 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         ),
 
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
 
                         Obx(
                           () => TextFormField(
@@ -199,7 +202,7 @@ class RegisterScreen extends StatelessWidget {
             ),
               
               
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               ElevatedButton(
                 onPressed: () {
                   //register
