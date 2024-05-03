@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:programming_puzzles/navigation/map.dart';
+import 'package:programming_puzzles/widgets/backbutton.dart';
 
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
 
   var formKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   var isObscure = true.obs;
+
+  LoginScreen({super.key});
 
 
   @override
@@ -25,9 +29,9 @@ class LoginScreen extends StatelessWidget {
               width: 270,
               height: 270,
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             
-            Text(
+            const Text(
               'Login',
               style: TextStyle(
                 fontSize: 24,
@@ -35,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             // Textboxes for email and password
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -45,6 +49,7 @@ class LoginScreen extends StatelessWidget {
                     key: formKey,
                     child: Column (
                       children: [
+
                         //email
                         TextFormField(
                           style: TextStyle(
@@ -87,8 +92,9 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
 
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
 
+                        //password
                         Obx(
                           () => TextFormField(
                           style: TextStyle(
@@ -155,6 +161,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 110),
+
             // Button for login process
             ElevatedButton(
             
@@ -178,6 +185,18 @@ class LoginScreen extends StatelessWidget {
                 ),
                 ),
             ),
+
+            Positioned(
+                top: 40.0, 
+                left: 20.0, 
+                child: BackButtonWidget(
+                  onPressed: () {
+                    
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
+              
           ],
         ),
           )

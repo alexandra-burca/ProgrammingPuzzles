@@ -8,16 +8,7 @@ class MapScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            // Background image
-            Image.asset(
-              'assets/images/map.jpg', // Replace with your background image path
-              
-              width: MediaQuery.of(context).size.width,
-              repeat: ImageRepeat.repeatY,
-            ),
 
-            // Overlay with repeatable image
-          // Select a level widget
           Positioned(
             top: 70.0,
             left: 0,

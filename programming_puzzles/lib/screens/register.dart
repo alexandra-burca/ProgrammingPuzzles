@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:programming_puzzles/widgets/backbutton.dart';
 
 // ignore: must_be_immutable
 class RegisterScreen extends StatelessWidget {
@@ -49,11 +50,13 @@ class RegisterScreen extends StatelessWidget {
                     child: Column (
                       children: [
 
+                        //name
                         TextFormField(
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 18,
                           ),
+
                           controller: nameController,
                           validator: (val) => val == "" ? "Trebuie sa introduci numele" : null,
                           decoration: InputDecoration(
@@ -92,11 +95,13 @@ class RegisterScreen extends StatelessWidget {
                         
                         const SizedBox(height: 12),
 
+                        //email
                         TextFormField(
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 18,
                           ),
+
                           controller: emailController,
                           validator: (val) => val == "" ? "Trebuie sa introduci email-ul" : null,
                           decoration: InputDecoration(
@@ -135,6 +140,7 @@ class RegisterScreen extends StatelessWidget {
 
                         const SizedBox(height: 12),
 
+                        //password
                         Obx(
                           () => TextFormField(
                           style: TextStyle(
@@ -206,6 +212,7 @@ class RegisterScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   //register
+
                 },
                 child: Text('Creare cont'),
                 style: ElevatedButton.styleFrom(
@@ -218,6 +225,19 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 ),
               ),
+
+              // Overlay back button
+              Positioned(
+                top: 40.0, 
+                left: 20.0, 
+                child: BackButtonWidget(
+                  onPressed: () {
+                    
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
+
             ],
           ),
         ),
