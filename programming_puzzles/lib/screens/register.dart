@@ -13,6 +13,11 @@ class RegisterScreen extends StatelessWidget {
 
   RegisterScreen({super.key});
 
+  validateUserEmail()
+  {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +27,23 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-              const SizedBox(height: 50),
+
+              Row (
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                    padding: const EdgeInsets.only(top: 25.0, left: 5.0),
+                child: BackButtonWidget(
+                  onPressed: () {
+                    
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ),
+              ],
+              ),
+
+              const SizedBox(height: 0),
               Image.asset(
                 'assets/images/register.png',
                 height: 280,
@@ -208,10 +229,15 @@ class RegisterScreen extends StatelessWidget {
             ),
               
               
-              const SizedBox(height: 80),
+              const SizedBox(height: 70),
               ElevatedButton(
                 onPressed: () {
                   //register
+                  if(formKey.currentState!.validate()) {
+                    //validate email
+                    validateUserEmail();
+
+                  }
 
                 },
                 child: Text('Creare cont'),
@@ -226,17 +252,6 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
 
-              // Overlay back button
-              Positioned(
-                top: 40.0, 
-                left: 20.0, 
-                child: BackButtonWidget(
-                  onPressed: () {
-                    
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ),
 
             ],
           ),

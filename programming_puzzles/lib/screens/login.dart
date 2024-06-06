@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:programming_puzzles/navigation/map.dart';
+import 'package:programming_puzzles/navigation/nav.dart';
 import 'package:programming_puzzles/widgets/backbutton.dart';
 
 // ignore: must_be_immutable
@@ -23,7 +23,24 @@ class LoginScreen extends StatelessWidget {
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 90),
+            
+            Row (
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                    padding: const EdgeInsets.only(top: 25.0, left: 5.0),
+                child: BackButtonWidget(
+                  onPressed: () {
+                    
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ),
+              ],
+              ),
+            
+
+            const SizedBox(height: 35),
             Image.asset(
               'assets/images/login.png', 
               width: 270,
@@ -160,7 +177,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 110),
+            SizedBox(height: 100),
 
             // Button for login process
             ElevatedButton(
@@ -168,7 +185,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MapScreen()),
+                  MaterialPageRoute(builder: (context) => CustomBottomNavigationBar()),
                 );
           
               },
@@ -186,16 +203,7 @@ class LoginScreen extends StatelessWidget {
                 ),
             ),
 
-            Positioned(
-                top: 40.0, 
-                left: 20.0, 
-                child: BackButtonWidget(
-                  onPressed: () {
-                    
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ),
+            
               
           ],
         ),
