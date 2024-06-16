@@ -65,7 +65,7 @@ class MapScreen extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 
                 child: Text(
-                  'Capitolul 2: Functii',
+                  'Capitolul 2: Structuri',
                   style: TextStyle(
                     fontSize: 28.0,
                     fontFamily: 'Poppins',
@@ -106,6 +106,21 @@ class MapScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Level1Slide1()),
                   );
                 },
+              ),
+
+              SizedBox(height: 30), // Add space between boxes
+            
+              Padding(
+                padding: EdgeInsets.all(20.0),
+                
+                child: Text(
+                  'Capitolul 3: Algoritmi',
+                  style: TextStyle(
+                    fontSize: 28.0,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               
               SizedBox(height: 20), // Add space between boxes
@@ -179,11 +194,11 @@ class Box_One extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 1',
+            'Lecția 1',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -212,11 +227,11 @@ class Box_Two extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 2',
+            'Lecția 2',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -244,11 +259,11 @@ class Box_Three extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 3',
+            'Lecția 3',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -276,11 +291,11 @@ class Box_Four extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 4',
+            'Lecția 4',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -308,11 +323,11 @@ class Box_Five extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 5',
+            'Lecția 5',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -340,11 +355,11 @@ class Box_Six extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 6',
+            'Lecția 6',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -372,11 +387,11 @@ class Box_Seven extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 7',
+            'Lecția 7',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -404,11 +419,11 @@ class Box_Eight extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 8',
+            'Lecția 8',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -436,11 +451,11 @@ class Box_Nine extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 9',
+            'Lecția 9',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -468,11 +483,11 @@ class Box_Ten extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lectia 10',
+            'Lecția 10',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 18.0,
-              fontFamily: 'PressStart2P',
+              fontSize: 30,
+              fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
           ),

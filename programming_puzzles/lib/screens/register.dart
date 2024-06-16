@@ -1,6 +1,12 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:programming_puzzles/api_connection/api_connection.dart';
+import 'package:programming_puzzles/models/user.dart';
 import 'package:programming_puzzles/widgets/backbutton.dart';
+import 'package:http/http.dart' as http;
 
 // ignore: must_be_immutable
 class RegisterScreen extends StatelessWidget {
@@ -13,8 +19,71 @@ class RegisterScreen extends StatelessWidget {
 
   RegisterScreen({super.key});
 
-  validateUserEmail()
+  validateUserEmail() async
   {
+    try {
+      var res = await http.post(
+        Uri.parse(API.validateEmail),
+        body: {
+          'email': emailController.text.trim(),
+        }
+        );
+
+        if (res.statusCode == 200){
+          var resBody = jsonDecode(res.body);
+
+          if (resBody['emailFound'] == true) {
+            Fluttertoast.showToast(msg: "Adresa de email este deja folosită.");
+          }
+          else{
+            registerUser();
+
+          }
+
+        }
+    }
+
+    catch(e) {
+      print(e.toString());
+      Fluttertoast.showToast(msg: e.toString());
+
+    }
+
+  }
+
+  registerUser() async {
+    User userModel = User(
+      1,
+      nameController.text.trim(),
+      emailController.text.trim(),
+      passwordController.text.trim(),
+
+    );
+
+    try{
+      var res = await http.post(
+        Uri.parse(API.signup),
+        body: userModel.toJson(),
+      );
+
+      if (res.statusCode == 200){
+        var resBody = jsonDecode(res.body);
+
+        if (resBody['success'] == true) {
+          Fluttertoast.showToast(msg: "Contul a fost creat cu succes!");
+        }
+        else
+        {
+          Fluttertoast.showToast(msg: "A aparut o eroare la crearea contului.");
+        }
+      }
+    }
+
+    catch(e) {
+      print(e.toString());
+      Fluttertoast.showToast(msg: "Contul a fost creat cu succes!");
+
+    }
 
   }
 
@@ -235,7 +304,7 @@ class RegisterScreen extends StatelessWidget {
                   //register
                   if(formKey.currentState!.validate()) {
                     //validate email
-                    validateUserEmail();
+                    registerUser();
 
                   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:programming_puzzles/navigation/nav.dart';
 import 'package:programming_puzzles/widgets/backbutton.dart';
+import 'package:programming_puzzles/widgets/route.dart';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
@@ -185,7 +186,7 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CustomBottomNavigationBar()),
+                  createRoute(CustomBottomNavigationBar()),
                 );
           
               },
