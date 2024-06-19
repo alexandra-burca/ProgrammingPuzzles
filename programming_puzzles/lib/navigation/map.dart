@@ -29,10 +29,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_One(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -40,10 +40,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Two(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -51,10 +51,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Three(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -78,10 +78,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Four(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -89,10 +89,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Five(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -100,10 +100,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Six(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -126,10 +126,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Seven(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -137,10 +137,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Eight(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -148,10 +148,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Nine(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -159,10 +159,10 @@ class MapScreen extends StatelessWidget {
               SizedBox(height: 20), // Add space between boxes
               Box_Ten(
                 onTap: () {
-                  // Navigate to the Level1Slide1 screen when box is tapped
+                  // Navigate to the Level1 screen when box is tapped
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Level1Slide1()),
+                    MaterialPageRoute(builder: (context) => Level1()),
                   );
                 },
               ),
@@ -194,10 +194,10 @@ class Box_One extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 1',
+            ' Lecția 1\nOperatori',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -227,10 +227,10 @@ class Box_Two extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 2',
+            'Lecția 2\nOperații',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -259,10 +259,10 @@ class Box_Three extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 3',
+            ' Lecția 3\nPseudocod',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -291,10 +291,10 @@ class Box_Four extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 4',
+            '     Lecția 4\nStructura liniară',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 24,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -323,10 +323,10 @@ class Box_Five extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 5',
+            '      Lecția 5\nStructura decizională',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 22,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -355,10 +355,10 @@ class Box_Six extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 6',
+            '       Lecția 6\nStructura condițională',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 22,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -387,10 +387,10 @@ class Box_Seven extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 7',
+            '   Lecția 7\nInterschimbare',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -419,10 +419,10 @@ class Box_Eight extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 8',
+            '  Lecția 8\nMinim/Maxim',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -451,10 +451,10 @@ class Box_Nine extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 9',
+            '    Lecția 9\nPrelucrare cifre',
             style: TextStyle(
               color: Colors.grey[100],
-              fontSize: 30,
+              fontSize: 26,
               fontFamily: 'RobotoMono',
               fontWeight: FontWeight.bold,
             ),
@@ -483,7 +483,7 @@ class Box_Ten extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Lecția 10',
+            'Test 1',
             style: TextStyle(
               color: Colors.grey[100],
               fontSize: 30,
