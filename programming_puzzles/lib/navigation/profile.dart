@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
+import 'package:programming_puzzles/services/auth_service.dart';
+
 class ProfileScreen extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -174,7 +176,7 @@ class _ProfilePageState extends State<ProfileScreen> {
                           _notificationsEnabled = value;
                         });
                       },
-                      activeColor: Colors.pink[400], // Change this color to whatever you prefer
+                      activeColor: Colors.pink[400], 
                     ),
                     ],
                   ),
@@ -209,9 +211,9 @@ class _ProfilePageState extends State<ProfileScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: 16.0),
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Handle logout logic here
-                    },
+                    onPressed: () async {
+                    await AuthService().signout(context: context);
+                  },
                     child: Text('Iesi din cont'),
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.yellow[300],

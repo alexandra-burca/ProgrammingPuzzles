@@ -32,44 +32,48 @@ class _Level1State extends State<Level1> {
     ),
 
     StaticScreen(
-      text: 'Acestia sunt operatorii aritmetici ce ii cunosti deja:\nadunare +\nscadere -\ninmultire *\nimpartire /',
+      text: 'Aceștia sunt operatorii aritmetici ce îi cunoști deja:\nadunare +\nscădere -\nînmulțire *\nîmpărțire /',
     ),
 
     Question(
-      text: 'Se semnifica operatorul MOD?',
-      answers: ['adunare', 'scadere', 'inmultire', 'catul impartirii'],
+      text: 'Se semnifică operatorul MOD?',
+      answers: ['adunare', 'scădere', 'înmulțire', 'câtul împărțirii'],
       correctIndex: 3,
       ),
 
     Question(
-      text: 'Se semnifica operatorul MOD?',
-      answers: ['restul impartirii', 'impartire', 'putere', 'fractie',],
+      text: 'Se semnifică operatorul MOD?',
+      answers: ['restul împărțirii', 'împărțire', 'putere', 'fracție',],
       correctIndex: 0,
       ),
 
     StaticScreen(
-        text: 'Iata un exemplu pentru aceste operatii:\n 13 / 2 = 6 rest 1\n deci,\n 13 DIV 2 = 6\n 13 MOD 2 = 1'),
+        text: 'Iată un exemplu pentru aceste operații:\n 13 / 2 = 6 rest 1\n deci,\n 13 DIV 2 = 6\n 13 MOD 2 = 1'),
 
     StaticScreen(
-      text: 'Operatori relationali:\n <   mai mic\n >    mai mare\n<=    mai mic sau egal\n>=    mai mare sau egal\n=   egal\n<>   diferit'
+      text: 'Operatori relaționali:\n <   mai mic\n >    mai mare\n<=    mai mic sau egal\n>=    mai mare sau egal\n=   egal\n<>   diferit'
       ),    
 
     StaticScreen(
-      text:'Operatoti logici:\nNOT   negatie\nAND    si logic\nOR    sau logic'),
+      text:'Operatoti logici:\nNOT   negatie\nAND    și logic\nOR    sau logic'),
+
+    
 
     TextBoxQuestion(
-      question: 'What is the capital of France?',
-      correctAnswer: 'Paris',
-      hint: 'It is also known as the city of light.',
+      question: 'Ești aproape de finalul lecției! Rezolvă acest exercițiu.\n 12-(7 DIV 2)+(3 MOD 4)=',
+      correctAnswer: '8',
+      hint: 'Ai grija la ordinea operațiilor',
     ),
+
+    StaticScreen(text: 'Corect! Ai urmat și tu acești pași?\n 7 DIV 2 = 5\n 3 MOD 4 = 1\n 12 - 5 + 1 = 8'),
     
     FinalScreen(
-      text: 'Felicitari, ai completat cu succes lectia!',
+      text: 'Felicitări, ai completat cu succes lecția! Poți verifica cunoștințele dobândite în portofoliu.',
     ),
     
   ];
 
-    int currentQuizItemIndex = 0;
+  int currentQuizItemIndex = 0;
   int? selectedAnswerIndex;
   bool isAnswerCorrect = false;
   String userAnswer = '';
@@ -212,10 +216,15 @@ class _Level1State extends State<Level1> {
     else if (currentQuizItem is TextBoxQuestion) {
       TextBoxQuestion currentTextBoxQuestion = currentQuizItem as TextBoxQuestion;
       return Scaffold(
-        body: Padding(
+        body: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: <Widget>[
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
+          
+                
               const SizedBox(height: 120),
               Text(
                 currentTextBoxQuestion.question,
@@ -238,12 +247,12 @@ class _Level1State extends State<Level1> {
               ),
             ),
 
-              SizedBox(height: 70),
+              SizedBox(height: 50),
 
               ElevatedButton(
                 onPressed: checkTextBoxAnswer,
 
-                child: Text('Verifica'),
+                child: Text('Verifică'),
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal[200],
                 foregroundColor: Colors.black, 
@@ -260,7 +269,7 @@ class _Level1State extends State<Level1> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Raspuns gresit. Mai incearca!',
+                    'Raspuns greșit. Mai incearcă!',
                     style: TextStyle(color: Colors.red, fontSize: 16),
                   ),
                 ),
@@ -268,7 +277,7 @@ class _Level1State extends State<Level1> {
 
               if (isTextBoxAnswerCorrect)
 
-                SizedBox(height: 160),
+                SizedBox(height: 140),
               Visibility(
                 visible: isTextBoxAnswerCorrect,
                 child: TextButton(
@@ -280,11 +289,13 @@ class _Level1State extends State<Level1> {
                   ),
                 ),
               ),
-                
-            ],
+              ]
+    
           ),
         ),
+        ),
       );
+      
     } 
     
     
@@ -324,7 +335,7 @@ class _Level1State extends State<Level1> {
           
               },
              
-              child: Text('Inapoi la meniu'),
+              child: Text('Înapoi la meniu'),
                 style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.pink[300],
                 foregroundColor: Colors.black, 

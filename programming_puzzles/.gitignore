@@ -11,6 +11,7 @@
 .svn/
 migrate_working_dir/
 .api_connection
+google-services.json
 
 # IntelliJ related
 *.iml

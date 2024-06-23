@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:programming_puzzles/navigation/nav.dart';
+import 'package:programming_puzzles/services/auth_service.dart';
 import 'package:programming_puzzles/widgets/backbutton.dart';
-import 'package:programming_puzzles/widgets/route.dart';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
@@ -27,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             
             Row (
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: [ 
                 Padding(
                     padding: const EdgeInsets.only(top: 25.0, left: 5.0),
                 child: BackButtonWidget(
@@ -183,13 +182,13 @@ class LoginScreen extends StatelessWidget {
             // Button for login process
             ElevatedButton(
             
-                onPressed: () {
-                Navigator.push(
-                  context,
-                  createRoute(CustomBottomNavigationBar()),
-                );
-          
-              },
+                onPressed: () async {
+                  await AuthService().signin(
+                    email: emailController.text,
+                    password: passwordController.text,
+                    context: context
+                  );
+                },
                      
               child: Text('Intră în cont'),
                 style: ElevatedButton.styleFrom(
